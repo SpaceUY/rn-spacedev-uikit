@@ -156,6 +156,12 @@ const RootNavigator = () => {
         }}
       />
       <Stack.Screen
+        name="ui-kit/textarea"
+        options={{
+          title: 'Textarea',
+        }}
+      />
+      <Stack.Screen
         name="ui-kit/texts"
         options={{
           title: 'Texts',

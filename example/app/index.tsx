@@ -81,6 +81,11 @@ const components = [
     route: 'ui-kit/switches',
     iconName: 'ToggleRight',
   },
+  {
+    name: 'Textarea',
+    route: 'ui-kit/textarea',
+    iconName: 'WrapText',
+  },
 ];
 
 export default function UIKitScreen() {
