@@ -81,6 +81,16 @@ const components = [
     route: 'ui-kit/switches',
     iconName: 'ToggleRight',
   },
+  {
+    name: 'Textarea',
+    route: 'ui-kit/textarea',
+    iconName: 'WrapText',
+  },
+  {
+    name: 'Otp Input',
+    route: 'ui-kit/otp-input',
+    iconName: 'ScanEye',
+  },
 ];
 
 export default function UIKitScreen() {

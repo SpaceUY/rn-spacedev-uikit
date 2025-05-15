@@ -15,3 +15,7 @@ export { default as Switch } from './components/Switch';
 export { ButtonVariant, ButtonSize } from './components/ButtonContainer';
 export { convertHexToRgba } from './utils/uiUtils';
 export { default as BottomSheet } from './components/BottomSheet';
+export { default as TextArea } from './components/TextArea';
+export { OtpInputContainer } from './components/OtpInputContainer';
+export { OtpInput } from './components/OtpInput';
+export { type OtpInputContainerRef } from './components/OtpInputContainer';

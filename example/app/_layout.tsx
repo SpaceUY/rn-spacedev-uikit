@@ -156,6 +156,12 @@ const RootNavigator = () => {
         }}
       />
       <Stack.Screen
+        name="ui-kit/textarea"
+        options={{
+          title: 'Textarea',
+        }}
+      />
+      <Stack.Screen
         name="ui-kit/texts"
         options={{
           title: 'Texts',
@@ -189,6 +195,12 @@ const RootNavigator = () => {
         name="ui-kit/icon-buttons"
         options={{
           title: 'Icon Buttons',
+        }}
+      />
+      <Stack.Screen
+        name="ui-kit/otp-input"
+        options={{
+          title: 'Otp Input',
         }}
       />
       <Stack.Screen

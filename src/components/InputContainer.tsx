@@ -26,6 +26,7 @@ type Props = PropsWithChildren & {
   focused?: boolean;
   disabled?: boolean;
   size?: 'small' | 'default';
+  height?: number;
 };
 
 export type InputRef = { focus: () => void };
@@ -45,6 +46,7 @@ export default function InputContainer({
   children,
   size = 'default',
   disabled,
+  height,
 }: Props) {
   const status = useSharedValue(INACTIVE);
   const { colors, theme } = useTheme();
@@ -62,7 +64,10 @@ export default function InputContainer({
     status.value = withTiming(error ? ERROR : _status, { duration: 300 });
   }, [error, status, focused]);
 
-  const height = useMemo(() => (size === 'small' ? 32 : 40), [size]);
+  const containerHeight = useMemo(
+    () => height ?? (size === 'small' ? 32 : 40),
+    [size, height]
+  );
 
   return (
     <View style={[style, disabled && styles.disabled]}>
@@ -77,7 +82,7 @@ export default function InputContainer({
             contentContainerStyle,
             animStyle,
             styles.container,
-            { height, borderRadius: theme.roundness },
+            { height: containerHeight, borderRadius: theme.roundness },
           ]}
           children={children}
         />
